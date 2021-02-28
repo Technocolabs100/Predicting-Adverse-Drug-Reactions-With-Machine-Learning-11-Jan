@@ -1,0 +1,22 @@
+<html>
+<body>
+	<style>
+		body {
+			background-image: url('img1.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	</style>
+
+	<h1><marquee><font color="white">Predicting the Severity of Adverse Drug Reactions</marquee></h1>
+	<h3 ><i><font color="#003399">Enter the Drug Smile Below</font></i></h3>
+	<form  method="POST">
+		{# This hidden_tag is a CSRF security feature. #}
+		{{ form.hidden_tag() }}
+		{{ form.drug.label }} {{form.drug}}
+        <br>
+	    <br>
+        {{ form.submit() }}
+    </form>
+</body>
+<html>
